@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Como tudo começou | Amoure Markets</title>
+  <style>
+    :root {
+      --bg: #f9f6f3;
+      --text: #2b2b2b;
+      --muted: #6a6a6a;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* Header igual ao resto do site */
+    header {
+      width: 100%;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: center;
+      background: rgba(249,246,243,0.9);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+      cursor: pointer;
+    }
+
+    .logo {
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 3.5rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    /* Fotografia */
+    .founders-photo {
+      width: min(100%, 520px);
+      border-radius: 18px;
+      overflow: hidden;
+      margin: 0 auto 2.3rem auto;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.06);
+    }
+
+    .founders-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Caixa de texto tipo revista */
+    .story-box {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 2rem 2rem 2.5rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    }
+
+    .story {
+      text-align: justify;
+      column-count: 2;
+      column-gap: 2.5rem;
+      color: #4d4d4d;
+      font-size: 0.95rem;
+    }
+
+    .story p {
+      margin-bottom: 1.2rem;
+      break-inside: avoid;
+    }
+
+    /* Botão */
+    .back-btn {
+      display: inline-block;
+      margin-top: 2.6rem;
+      font-size: 0.8rem;
+      color: #2b2b2b;
+      text-decoration: none;
+      background: #fff;
+      padding: 0.5rem 1.1rem;
+      border-radius: 999px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.03);
+      border: 1px solid rgba(0,0,0,0.02);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 3rem;
+      font-size: 0.75rem;
+      color: #999;
+    }
+
+    /* Responsivo */
+    @media (max-width: 780px) {
+      .story {
+        column-count: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header onclick="goHome()">
+    <div class="logo">AMOURE MARKETS</div>
+  </header>
+
+  <main class="container">
+    <h1>Como tudo começou</h1>
+
+    <!-- Foto -->
+    <div class="founders-photo">
+      <img src="transferir.webp" alt="Francisca Fernandes e Adriana Sá, fundadoras dos Amoure Markets">
+    </div>
+
+    <!-- Texto em duas colunas dentro de caixa branca -->
+    <div class="story-box">
+      <div class="story">
+        <p>
+          Os Mercados Amoure nasceram da união de duas mulheres do norte, <strong>Francisca Fernandes</strong> e <strong>Adriana Sá</strong>, com o propósito de criar mercados bonitos, com curadoria e com alma. 
+          A Francisca, fundadora da <strong>Brígida Concept Store</strong>, traz a experiência do mundo da moda e da criação de peças com identidade e propósito. Já tinha participado em diversos mercados e sabia o quanto um evento pode transformar a perceção de uma marca.
+        </p>
+
+        <p>
+          A Adriana, licenciada em <strong>Marketing pela Universidade do Minho</strong>, na altura trabalhava na área de Recursos Humanos e sempre teve a ambição de criar eventos que inspiram e aproximam pessoas. 
+          Quando a Francisca lançou o desafio, perceberam que juntas poderiam criar algo diferente — um conceito que fosse mais do que um simples mercado, mas sim uma experiência visual e emocional.
+        </p>
+
+        <p>
+          Assim nasceram os <strong>Amoure Markets</strong>: o <strong>Amoure de Noel</strong>, dedicado ao encanto do Natal, e o <strong>Amoure Azure</strong>, pensado para celebrar o verão, a criatividade e o talento português.
+          Ambos os eventos são marcados por uma estética cuidada, seleção de marcas com propósito e uma atmosfera envolvente, onde cada detalhe é pensado para ser sentido.
+        </p>
+
+        <p>
+          A curadoria das marcas é feita com base em três pilares: qualidade, autenticidade e alinhamento com valores de sustentabilidade e impacto social. 
+          O objetivo é criar um espaço onde as marcas portuguesas ganham voz, os visitantes se inspiram e o consumo consciente é celebrado.
+        </p>
+
+        <p>
+          Desde o início, os Amoure Markets têm uma forte <strong>vertente solidária</strong>. 
+          As edições já apoiaram a <strong>Cruz Vermelha de Braga</strong> e os <strong>Bombeiros Voluntários de Vila Verde</strong>, reforçando a importância de contribuir para a comunidade e apoiar causas locais.
+        </p>
+
+        <p>
+          Mais do que um evento, o Amoure é uma celebração da partilha, do talento português e do poder dos pequenos gestos. 
+          Um espaço onde se encontram propósito, estética e comunidade — e onde tudo começou com duas amigas e uma ideia com coração.
+        </p>
+      </div>
+    </div>
+
+    <a class="back-btn" href="#" onclick="goHome(); return false;">← Voltar à página principal</a>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Amoure Markets. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function goHome() {
+      var homePage = "amoureindex.html";  // altera se o teu ficheiro principal tiver outro nome
+      window.location.href = homePage;
+    }
+  </script>
+</body>
+</html>

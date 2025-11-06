@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amoure Azure | Amoure Markets</title>
+  <style>
+    :root {
+      --bg: #f9f6f3;
+      --text: #2b2b2b;
+      --muted: #6a6a6a;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* header igual ao site */
+    header {
+      width: 100%;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: center;
+      background: rgba(249,246,243,0.9);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+      cursor: pointer;
+    }
+
+    .logo {
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 3.5rem;
+    }
+
+    .hero-tag {
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.65rem;
+      color: #3a6b7d; /* azulinho suave */
+      margin-bottom: 0.6rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .lead {
+      max-width: 620px;
+      margin: 0 auto 2rem auto;
+      color: var(--muted);
+    }
+
+    .info-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.2rem 1.1rem 1.3rem;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.02);
+      max-width: 420px;
+      margin: 0 auto 2.5rem auto;
+    }
+
+    .info-title {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #737373;
+      margin-bottom: 0.4rem;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: #2b2b2b;
+      text-decoration: none;
+      background: #fff;
+      padding: 0.5rem 1.1rem;
+      border-radius: 999px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.03);
+      border: 1px solid rgba(0,0,0,0.02);
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 3rem;
+      font-size: 0.75rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <header onclick="goHome()">
+    <div class="logo">AMOURE MARKETS</div>
+  </header>
+
+  <main class="container">
+    <p class="hero-tag">Edição Primavera / Verão</p>
+    <h1>Amoure Azure</h1>
+    <p class="lead">
+      A edição mais leve e luminosa dos Amoure Markets. Moda, kids, beleza e lifestyle num ambiente pensado ao detalhe para marcas portuguesas.
+    </p>
+
+    <div class="info-box">
+      <p class="info-title">Datas e local</p>
+      <p><strong>Voltamos em 2026</strong></p>
+      <p>Data e local serão anunciados nas nossas redes sociais.</p>
+      <p style="font-size:0.75rem; color:#999; margin-top:0.5rem;">
+        Acompanha o Instagram para não perder as inscrições.
+      </p>
+    </div>
+
+    <a class="back-btn" href="#" onclick="goHome(); return false;">← Voltar ao site</a>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Amoure Markets. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function goHome() {
+      // usa o mesmo nome que já estás a usar nas outras páginas
+      var homePage = "amoureindex.html"; // se o teu principal for index.html, troca aqui
+      window.location.href = homePage;
+    }
+  </script>
+</body>
+</html>

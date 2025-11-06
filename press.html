@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mercados em destaque | Amoure Markets</title>
+  <style>
+    :root {
+      --bg: #f9f6f3;
+      --text: #2b2b2b;
+      --muted: #6a6a6a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      width: 100%;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: center;
+      background: rgba(249,246,243,0.9);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+      cursor: pointer;
+    }
+
+    .logo {
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      text-align: left;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      margin-bottom: 3rem;
+      letter-spacing: -0.02em;
+    }
+
+    .article {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      padding-bottom: 1.5rem;
+    }
+
+    .article h2 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .article p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .article a {
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .article a:hover {
+      text-decoration: underline;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 2.5rem;
+      font-size: 0.85rem;
+      color: #2b2b2b;
+      text-decoration: none;
+      padding: 0.5rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.07);
+      background: #fff;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+      cursor: pointer;
+    }
+
+    .back-btn:hover {
+      background: #f2f2f2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 3rem;
+      font-size: 0.75rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <header onclick="goHome()">
+    <div class="logo">AMOURE MARKETS</div>
+  </header>
+
+  <main>
+    <h1>Mercados em destaque</h1>
+
+    <div class="article">
+      <h2>Magg: Amoure de Noel</h2>
+      <p>Artigo sobre o mercado de Natal.</p>
+      <a href="https://magg.sapo.pt/magg-lab/artigos/amoure-de-noel-mercado-natal" target="_blank" rel="noopener noreferrer">Ver artigo →</a>
+    </div>
+
+    <div class="article">
+      <h2>New in Braga</h2>
+      <p>Maison Albar recebe mercado premium.</p>
+      <a href="https://newinbraga.nit.pt/compras/hotel-maison-albar-amoure-recebe-um-mercado-premium-com-entrada-gratuita" target="_blank" rel="noopener noreferrer">Ver artigo →</a>
+    </div>
+
+    <div class="article">
+      <h2>Porto Business School</h2>
+      <p>Amoure Azure redefine luxo e sustentabilidade.</p>
+      <a href="https://www.pbs.up.pt/artigos-e-eventos/artigos/amoure-azure-o-mercado-que-redefine-o-luxo-e-a-sustentabilidade/" target="_blank" rel="noopener noreferrer">Ver artigo →</a>
+    </div>
+
+    <div class="article">
+      <h2>The Glitter Dream</h2>
+      <p>Mercado exclusivo nacional e com causa solidária.</p>
+      <a href="https://www.theglitterdream.pt/2025/05/02/amoure-azure-um-mercado-exclusivo-nacional-e-com-causa-solidaria/" target="_blank" rel="noopener noreferrer">Ver artigo →</a>
+    </div>
+
+    <div class="article">
+      <h2>Instagram Reel - maag.pt</h2>
+      <p>Vídeo de divulgação do Amoure no Instagram.</p>
+      <a href="https://www.instagram.com/reel/DDAMlqdsWPc/?utm_source=ig_web_copy_link" target="_blank" rel="noopener noreferrer">Ver no Instagram →</a>
+    </div>
+
+    <div class="article">
+      <h2>Instagram Post - theglitterdream</h2>
+      <p>Publicação sobre o Amoure.</p>
+      <a href="https://www.instagram.com/p/DJJMkwWCy4w/" target="_blank" rel="noopener noreferrer">Ver no Instagram →</a>
+    </div>
+
+    <div style="text-align:center;">
+      <a class="back-btn" href="#" onclick="goHome(); return false;">← Voltar à página principal</a>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Amoure Markets. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function goHome() {
+      var homePage = "amoureindex.html";
+      window.location.href = homePage;
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amoure Markets</title>
+  <style>
+    :root {
+      --bg: #f9f6f3;
+      --text: #2b2b2b;
+      --muted: #6a6a6a;
+      --white: #ffffff;
+      --radius: 18px;
+      --accent: #d99f7e; /* podes mudar para a tua paleta */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      width: 100%;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: center;
+      background: rgba(249,246,243,0.9);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .logo {
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 1.8rem 1.5rem 3.5rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2.5rem 0 2.8rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      letter-spacing: -0.03em;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto;
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.6rem;
+      margin-top: 2.5rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.25rem 1.25rem;
+      border: 1px solid rgba(0,0,0,0.025);
+      box-shadow: 0 12px 45px rgba(0,0,0,0.02);
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      min-height: 230px;
+    }
+
+    .card small {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.65rem;
+      color: #a0785f;
+    }
+
+    .card h2 {
+      font-size: 1.15rem;
+    }
+
+    .card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .card a {
+      margin-top: auto;
+      font-size: 0.78rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      display: inline-flex;
+      gap: 0.3rem;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(217,159,126,0.16);
+      color: #9d5f33;
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .section-title {
+      margin-top: 3.2rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: #737373;
+      margin-bottom: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.2rem 1.5rem 3rem;
+      color: #999;
+      font-size: 0.75rem;
+    }
+
+    .socials {
+      display: flex;
+      gap: 0.8rem;
+      justify-content: center;
+      margin-top: 1.2rem;
+    }
+
+    .social-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: #fff;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid rgba(0,0,0,0.03);
+      cursor: pointer;
+      transition: transform 0.1s ease-out;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Ícones simples em SVG dentro do botão */
+    .social-btn svg {
+      width: 16px;
+      height: 16px;
+      stroke: #2b2b2b;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding-top: 2.1rem;
+      }
+      .container {
+        padding-inline: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">AMOURE MARKETS</div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Onde o talento português se encontra com a magia das estações</h1>
+      <p>Do encanto do Natal à energia do verão, os Amoure Markets dão vida às estações com marcas inspiradoras, experiências únicas e uma estética que celebra o melhor de Portugal.
+
+Um conceito que une estilo, propósito e comunidade — onde cada detalhe é pensado para ser vivido, sentido e partilhado.</p>
+    </section>
+
+    <!-- Secção dos teus dois mercados -->
+    <p class="section-title">Mercados</p>
+    <div class="grid">
+      <article class="card" id="amoure-noel">
+        <small>Inverno</small>
+        <h2>Amoure de Noel</h2>
+        <p>O Amoure de Noel é um mercado de Natal que celebra o espírito da época com propósito, comunidade e marcas portuguesas cheias de alma.</p>
+        <!-- aqui pões o link verdadeiro da landing -->
+        <a href="amoure-noel.html" target="_blank" rel="noopener noreferrer">
+          Descobre a magia do Amoure de Noel
+          <span aria-hidden="true">→</span>
+        </a>
+      </article>
+
+      <article class="card" id="amoure-azure">
+        <small>Primavera / Verão</small>
+        <h2>Amoure Azure</h2>
+        <p>O Amoure Azure é um mercado de verão que celebra o sol, a criatividade e o talento português, num ambiente leve, inspirador e cheio de boas energias.</p>
+        <a href="amoure-azure.html" target="_blank" rel="noopener noreferrer">
+          Vive o verão do Amoure Azure
+          <span aria-hidden="true">→</span>
+        </a>
+      </article>
+    </div>
+
+    <!-- Podes usar isto para colocar outras páginas/links de inscrição -->
+    <p class="section-title">Da Inspiração à Comunidade</p>
+    <div class="grid">
+      <article class="card">
+        <span class="badge">Formulário</span>
+        <h2>Quero ser expositor</h2>
+        <p>Preenche o formulário de candidaturas de marcas para as próximas edições.</p>
+        <a href="formulario.html" target="_blank" rel="noopener noreferrer">
+          Abrir formulário → 
+        </a>
+      </article>
+
+      <article class="card">
+        <span class="badge">Media / Press</span>
+        <h2>Mercados em destaque</h2>
+        <p>Explora a presença dos mercados Amoure na imprensa.</p>
+        <a href="press.html" target="_blank" rel="noopener noreferrer">
+  Ver press →
+</a>
+      </article>
+
+      <article class="card">
+        <span class="badge">Sobre</span>
+        <h2>Como tudo começou</h2>
+        <p>A história, a visão e as pessoas que deram a vida aos mercados.</p>
+        <a href="sobre.html" target="_blank" rel="noopener noreferrer">
+          Descobre mais →
+        </a>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Amoure Markets. Todos os direitos reservados.</p>
+    <p style="margin-top:1rem;">
+      <a href="contactos.html" style="color:#2b2b2b; text-decoration:none; font-size:0.85rem;">
+        Contactos
+      </a>
+    </p>
+  </footer>
+
+
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
