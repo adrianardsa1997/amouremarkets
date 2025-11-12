@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Johnny Shark | Entrevista Amoure Markets</title>
+  <style>
+    :root {
+      --bg: #f9f6f3;
+      --text: #2b2b2b;
+      --muted: #6a6a6a;
+      --accent: #d99f7e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      width: 100%;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: center;
+      background: rgba(249,246,243,0.92);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+      cursor: pointer;
+    }
+
+    .logo {
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+    }
+
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .hero {
+      position: relative;
+      border-radius: 26px;
+      overflow: hidden;
+      padding: 2.8rem 2.4rem;
+      color: #fff;
+      margin-bottom: 2.8rem;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(140deg, rgba(0,0,0,0.6), rgba(0,0,0,0.15)), url('planta1.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: saturate(1.1);
+      z-index: -1;
+      transform: scale(1.02);
+    }
+
+    .hero span {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero p {
+      max-width: 480px;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.85);
+    }
+
+    section + section {
+      margin-top: 2.8rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      font-size: 0.98rem;
+      color: var(--muted);
+    }
+
+    blockquote {
+      margin: 2rem 0;
+      padding: 1.8rem 2rem;
+      background: rgba(217,159,126,0.14);
+      border-left: 4px solid var(--accent);
+      border-radius: 18px;
+      color: #8a5534;
+      font-style: italic;
+    }
+
+    .qa {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .qa h3 {
+      font-size: 1.05rem;
+      color: var(--text);
+    }
+
+    .qa p {
+      margin-top: 0.4rem;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #2b2b2b;
+      text-decoration: none;
+      padding: 0.55rem 1.3rem;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.07);
+      background: #fff;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+    }
+
+    .back-btn:hover {
+      background: #f2f2f2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <header onclick="goHome()">
+    <div class="logo">AMOURE MARKETS</div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <span>Entrevista</span>
+      <h1>Johnny Shark</h1>
+      <p>A marca que vive o verão o ano inteiro, com peças produzidas em pequenas séries e uma ligação profunda ao Atlântico.</p>
+    </div>
+
+    <section>
+      <h2>Como começou a Johnny Shark?</h2>
+      <p>A Johnny Shark nasceu na praia da Luz, no Algarve, quando a fundadora Catarina percebeu que não existia uma oferta de moda resort que fosse simultaneamente elegante e consciente. A marca começou com camisas de linho bordadas à mão e evoluiu para coleções cápsula que celebram o mar de forma responsável.</p>
+    </section>
+
+    <section>
+      <h2>Materiais com história</h2>
+      <p>Todos os tecidos são certificados e produzidos em teares portugueses. As sobras transformam-se em acessórios, num ciclo que envolve ateliers familiares e projetos sociais locais.</p>
+    </section>
+
+    <section class="qa">
+      <div>
+        <h3>O que distingue a presença no Amoure?</h3>
+        <p>Para Catarina, estar no Amoure significa encontrar uma comunidade que valoriza a autenticidade. O stand da Johnny Shark transforma-se num refúgio sensorial com sal, conchas e bandas-sonoras gravadas no estúdio da marca.</p>
+      </div>
+      <div>
+        <h3>Novidades para a próxima edição?</h3>
+        <p>A marca prepara uma linha limitada de fatos de banho reversíveis inspirados nas tonalidades das falésias portuguesas, com embalagens reutilizáveis feitas a partir de redes de pesca recuperadas.</p>
+      </div>
+    </section>
+
+    <blockquote>
+      “Queremos que cada peça transporte um pouco do oceano e da energia que sentimos quando a comunidade Amoure se reúne.”
+    </blockquote>
+
+    <section>
+      <h2>Como apoiar</h2>
+      <p>Podes descobrir mais sobre a Johnny Shark em <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">instagram.com/johnnyshark</a> e visitar o atelier em Cascais, mediante marcação.</p>
+    </section>
+
+    <a class="back-btn" href="marcas.html">← Voltar às marcas</a>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Amoure Markets. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function goHome() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
