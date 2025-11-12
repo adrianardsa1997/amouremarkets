@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conhece as marcas | Amoure Markets</title>
+  <style>
+    :root {
+      --bg: #f9f6f3;
+      --text: #2b2b2b;
+      --muted: #6a6a6a;
+      --white: #ffffff;
+      --radius: 22px;
+      --accent: #d99f7e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      width: 100%;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      justify-content: center;
+      background: rgba(249,246,243,0.92);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+      cursor: pointer;
+    }
+
+    .logo {
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.02em;
+    }
+
+    .intro {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 2.6rem;
+    }
+
+    .brand-list {
+      display: grid;
+      gap: 1.8rem;
+    }
+
+    .brand-card {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      padding: 2.4rem;
+      min-height: 240px;
+      display: flex;
+      align-items: flex-end;
+      color: var(--white);
+      isolation: isolate;
+    }
+
+    .brand-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(135deg, rgba(0,0,0,0.55), rgba(0,0,0,0.2)), var(--brand-image);
+      background-size: cover;
+      background-position: center;
+      filter: saturate(1.1);
+      transition: transform 0.35s ease;
+      z-index: -1;
+    }
+
+    .brand-card:hover::before {
+      transform: scale(1.05);
+    }
+
+    .brand-content {
+      max-width: 440px;
+    }
+
+    .brand-tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+      color: rgba(255,255,255,0.76);
+    }
+
+    .brand-card h2 {
+      font-size: 1.8rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.6rem;
+    }
+
+    .brand-card p {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .brand-btn {
+      margin-top: 1.4rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1.4rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.94);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .brand-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #2b2b2b;
+      text-decoration: none;
+      padding: 0.55rem 1.3rem;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.07);
+      background: #fff;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+    }
+
+    .back-btn:hover {
+      background: #f2f2f2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      font-size: 0.75rem;
+      color: #999;
+    }
+
+    @media (max-width: 680px) {
+      .brand-card {
+        padding: 2rem 1.6rem;
+        min-height: 220px;
+      }
+
+      .brand-card h2 {
+        font-size: 1.5rem;
+      }
+
+      .brand-card p {
+        font-size: 0.88rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header onclick="goHome()">
+    <div class="logo">AMOURE MARKETS</div>
+  </header>
+
+  <main>
+    <h1>Seleção de marcas entrevistadas</h1>
+    <p class="intro">
+      Descobre histórias de marcas portuguesas que vivem os valores Amoure. Cada entrevista aprofunda o propósito, o processo criativo e o impacto que estas marcas pretendem deixar na comunidade.
+    </p>
+
+    <section class="brand-list">
+      <article class="brand-card" style="--brand-image: url('planta1.jpg');">
+        <div class="brand-content">
+          <span class="brand-tag">Design sustentável</span>
+          <h2>Johnny Shark</h2>
+          <p>Peças de moda-resort produzidas em pequenas séries, pensadas para quem vive o mar com respeito e autenticidade.</p>
+          <a class="brand-btn" href="marca-johnny-shark.html">Conhece mais sobre a Johnny Shark →</a>
+        </div>
+      </article>
+
+      <article class="brand-card" style="--brand-image: url('planta2.jpg');">
+        <div class="brand-content">
+          <span class="brand-tag">Artesanato contemporâneo</span>
+          <h2>Casa do Sol</h2>
+          <p>Objetos em cerâmica e madeira que trazem a luz e o calor das tradições portuguesas para espaços modernos.</p>
+          <a class="brand-btn" href="marca-casa-do-sol.html">Conhece mais sobre a Casa do Sol →</a>
+        </div>
+      </article>
+
+      <article class="brand-card" style="--brand-image: url('transferir.webp');">
+        <div class="brand-content">
+          <span class="brand-tag">Beleza consciente</span>
+          <h2>Atlântico Azul</h2>
+          <p>Skincare inspirado no oceano, com fórmulas veganas e embalagens recarregáveis feitas no norte de Portugal.</p>
+          <a class="brand-btn" href="marca-atlantico-azul.html">Conhece mais sobre a Atlântico Azul →</a>
+        </div>
+      </article>
+    </section>
+
+    <a class="back-btn" href="#" onclick="goBack(); return false;">← Voltar atrás</a>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Amoure Markets. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function goHome() {
+      window.location.href = "index.html";
+    }
+
+    function goBack() {
+      if (document.referrer) {
+        window.history.back();
+      } else {
+        window.location.href = "editorial.html";
+      }
+    }
+  </script>
+</body>
+</html>
