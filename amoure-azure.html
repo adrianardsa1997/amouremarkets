@@ -95,28 +95,28 @@
       color: var(--muted);
     }
 
-    .info-box {
-      background: #fff;
-      border-radius: 16px;
-      padding: 1.2rem 1.1rem 1.3rem;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.02);
-      max-width: 420px;
-      margin: 0 auto 2.5rem auto;
-    }
-
-    .info-title {
-      font-size: 0.7rem;
-      text-transform: uppercase;
+    .info-box {␊
+      background: #fff;␊
+      border-radius: 16px;␊
+      padding: 1.2rem 1.1rem 1.3rem;␊
+      box-shadow: 0 12px 40px rgba(0,0,0,0.02);␊
+      max-width: 520px;
+      margin: 0 auto 2rem auto;
+    }␊
+␊
+    .info-title {␊
+      font-size: 0.7rem;␊
+      text-transform: uppercase;␊
       letter-spacing: 0.1em;
       color: #737373;
       margin-bottom: 0.4rem;
     }
 
-    .back-btn {
-      display: inline-block;
-      margin-top: 1rem;
-      font-size: 0.8rem;
-      color: #2b2b2b;
+    .back-btn {␊
+      display: inline-block;␊
+      margin-top: 1rem;␊
+      font-size: 0.8rem;␊
+      color: #2b2b2b;␊
       text-decoration: none;
       background: #fff;
       padding: 0.5rem 1.1rem;
@@ -124,6 +124,72 @@
       box-shadow: 0 6px 24px rgba(0,0,0,0.03);
       border: 1px solid rgba(0,0,0,0.02);
       cursor: pointer;
+    }
+
+    .cta {
+      display: inline-block;
+      background: #2c655c;
+      color: #fff;
+      padding: 0.75rem 1.6rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      margin: 0 auto 1.8rem auto;
+      box-shadow: 0 12px 32px rgba(44,101,92,0.18);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 36px rgba(44,101,92,0.22);
+    }
+
+    /* Countdown */
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 2.4rem auto 2.8rem;
+      max-width: 540px;
+    }
+
+    .count-item {
+      background: #fff;
+      border-radius: 14px;
+      padding: 0.9rem 1.1rem;
+      min-width: 90px;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.02);
+    }
+
+    .count-number {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #2c655c;
+    }
+
+    .count-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #6a6a6a;
+    }
+
+    .map {
+      margin: 0 auto 2.5rem;
+      max-width: 760px;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 14px 45px rgba(0,0,0,0.05);
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 360px;
+      border: 0;
     }
 
     footer {
@@ -142,27 +208,43 @@
   <main class="container">
     <p class="hero-tag">Edição Primavera / Verão</p>
     <h1>
+      <h1>
       <span class="title-amoure">Amoure</span>
       <span class="title-azure">Azure</span>
     </h1>
     <p class="lead">
-      A edição mais leve e luminosa dos Amoure Markets. Moda, kids, beleza e lifestyle num ambiente pensado ao detalhe para marcas portuguesas.
+      O Amoure Azure já tem data marcada.
+
+      Nos dias 6 e 7 de junho de 2026, o Hotel Maison Albar Amoure volta a ser o palco de um mercado pensado ao detalhe, que cruza marcas cuidadosamente selecionadas, uma experiência diferenciadora e um ambiente que convida a ficar, descobrir e voltar.
+
+      As inscrições para as marcas já se encontram abertas e podem ser feitas através do formulário disponível abaixo. As vagas são limitadas e a curadoria será feita de forma criteriosa, de acordo com o conceito do evento.
     </p>
+
+    <a class="cta" href="https://forms.gle/yi7nmr4FfuyoGAfD7" target="_blank" rel="noopener">Inscreve-te aqui</a>
 
     <div class="info-box">
       <p class="info-title">Datas e local</p>
-      <p><strong>O Amoure Azure já tem data marcada.</strong></p>
-      <p>
-        Nos dias 6 e 7 de junho de 2026, o Hotel Maison Albar Amoure volta a ser o palco de um mercado pensado ao detalhe,
-        que cruza marcas cuidadosamente selecionadas, uma experiência diferenciadora e um ambiente que convida a ficar, descobrir e voltar.
-      </p>
-      <p>
-        As inscrições para as marcas já se encontram abertas e podem ser feitas através do formulário disponível abaixo.
-        As vagas são limitadas e a curadoria será feita de forma criteriosa, de acordo com o conceito do evento.
-      </p>
-      <p style="margin-top:0.75rem;">
-        <a href="https://forms.gle/yi7nmr4FfuyoGAfD7" style="color:#2c655c; font-weight:600; text-decoration:none;">Inscreve-te aqui</a>
-      </p>
+      <p style="font-weight:600; font-size:1rem;">6 e 7 de junho de 2026</p>
+      <p style="color:#3a6b7d;">Maison Albar Amoure, Braga</p>
+    </div>
+
+    <div class="countdown" id="countdown">
+      <div class="count-item">
+        <div class="count-number" id="days">--</div>
+        <div class="count-label">dias</div>
+      </div>
+      <div class="count-item">
+        <div class="count-number" id="hours">--</div>
+        <div class="count-label">horas</div>
+      </div>
+      <div class="count-item">
+        <div class="count-number" id="minutes">--</div>
+        <div class="count-label">minutos</div>
+      </div>
+    </div>
+
+    <div class="map">
+      <iframe src="https://www.google.com/maps?q=Maison%20Albar%20-%20Amoure,%20Av.%20da%20C%C3%A2mara%2022,%204730-304&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa Maison Albar Amoure, Braga"></iframe>
     </div>
 
     <a class="back-btn" href="#" onclick="goHome(); return false;">← Voltar ao site</a>
@@ -170,8 +252,8 @@
 
   <footer>
     © <span id="year"></span> Amoure Markets. Todos os direitos reservados.
-  </footer>
-
+</footer>
+  
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -180,9 +262,36 @@
       var homePage = "index.html"; // se o teu principal for index.html, troca aqui
       window.location.href = homePage;
     }
+
+    const targetDate = new Date("2026-06-06T00:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        document.getElementById("days").innerText = "0";
+        document.getElementById("hours").innerText = "0";
+        document.getElementById("minutes").innerText = "0";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
   </script>
 </body>
 </html>
+
+
 
 
 
