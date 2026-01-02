@@ -65,6 +65,23 @@
       font-size: 1rem;
     }
 
+    .form-link {
+      display: inline-block;
+      padding: 0.85rem 1.4rem;
+      background: #111;
+      color: #fff;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-link:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 38px rgba(0, 0, 0, 0.12);
+    }
+
     .back-btn {
       display: inline-block;
       margin-top: 1rem;
@@ -95,8 +112,14 @@
   <main class="container">
     <h1>Formulário</h1>
     <p>
-      Neste momento, as inscrições para o <strong>Amoure de Noel</strong> encontram-se encerradas.<br>
-      Em breve abriremos as inscrições para o <strong>Amoure Azure</strong>.
+      <a
+        class="form-link"
+        href="https://forms.gle/yi7nmr4FfuyoGAfD7"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Acede ao fomulário de inscrição
+      </a>
     </p>
     <a class="back-btn" href="#" onclick="goHome(); return false;">← Voltar à página principal</a>
   </main>
@@ -115,4 +138,5 @@
   </script>
 </body>
 </html>
+
 
